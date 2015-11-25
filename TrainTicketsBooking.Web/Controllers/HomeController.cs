@@ -115,7 +115,7 @@ namespace TrainTicketsBooking.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Order(OrderModel model, string action)
+        public ActionResult Order(OrderModel model, string action)
         {
             try
             {
