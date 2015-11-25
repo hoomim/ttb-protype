@@ -1,0 +1,81 @@
+﻿@using System.Web.Optimization;
+@using System.Web.WebPages;
+@using System.Web.Mvc.Html;
+@using System.Web.Mvc;
+
+@model TrainTicketsBooking.Models.TicketQueryModel
+
+
+@{
+    ViewBag.Title = "在线订票";
+}
+
+
+<!-- begin col-12 -->
+<div class="col-md-12">
+
+    <!-- begin invoice -->
+    <div class="invoice">
+        <div class="invoice-company">
+            <span class="pull-right hidden-print">
+                @*<a href="javascript:;" class="btn btn-sm btn-success m-b-10"><i class="fa fa-download m-r-5"></i> Export as PDF</a>*@
+                <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-success m-b-10"><i class="fa fa-print m-r-5"></i> 打印</a>
+            </span>
+            余票查询
+        </div>
+
+        <div class="invoice-content">
+            @using (Html.BeginForm()) { 
+            <div class="invoice-header">
+                <div class="invoice-from">
+                    @Html.DropDownListFor(model => model.FromStationId, (ViewData["FromStationId"] as SelectList), "起始车站", new { @class = "form-control" })
+                    <address class="m-t-5 m-b-5">
+                        <strong>出发站</strong><br />
+                    </address>
+                </div>
+                <div class="invoice-to">
+                    @Html.DropDownListFor(model => model.ToStationId, (ViewData["ToStationId"] as SelectList), "达到车站", new { @class = "form-control" })
+                    <address class="m-t-5 m-b-5">
+                        <strong>到达站</strong><br />
+                    </address>
+                </div>
+                <div class="invoice-date">
+                    <input type="submit" class="btn btn-block btn-info" value="查询余票" />
+                </div>
+            </div>
+            }
+            <div class="table-responsive">
+                <table class="table table-invoice">
+                    <thead>
+                        <tr>
+                            <th>车次/类型</th>
+                            <th>剩余票数</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h5>G71 / 高速动车</h5>
+                                <small>北京西 - 广州南 （G71） 共2239公里</small>
+                            </td>
+                            <td>@Model.AvailableTicketsCount</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        @Html.Partial("_OrderLinkPartialView",Model)
+
+        <div class="invoice-note">
+            * Make all cheques payable to [Your Company Name]<br />
+            * Payment is due within 30 days<br />
+            * If you have any questions concerning this invoice, contact  [Name, Phone Number, Email]
+        </div>
+    </div>
+    <!-- end invoice -->
+
+</div>
+<!-- end col-12 -->

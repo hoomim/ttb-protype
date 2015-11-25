@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "订票成功";
+}
+
+
+<!-- begin col-12 -->
+<div class="col-md-12">
+
+    <!-- begin invoice -->
+    <div class="invoice">
+        <div class="invoice-company">
+            <span class="pull-right hidden-print">
+                @*<a href="javascript:;" class="btn btn-sm btn-success m-b-10"><i class="fa fa-download m-r-5"></i> Export as PDF</a>*@
+                <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-success m-b-10"><i class="fa fa-print m-r-5"></i> 打印</a>
+            </span>
+            订票成功
+        </div>
+
+        
+
+        <a href="#" class="btn btn-default btn-block btn-lg disabled">前去支付</a>
+
+        <div class="invoice-note">
+            * Make all cheques payable to [Your Company Name]<br />
+            * Payment is due within 30 days<br />
+            * If you have any questions concerning this invoice, contact  [Name, Phone Number, Email]
+        </div>
+    </div>
+    <!-- end invoice -->
+
+</div>
+<!-- end col-12 -->

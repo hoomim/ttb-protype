@@ -1,0 +1,5 @@
+E:\Downloads\TrainTicketsBooking\DigitalSignage.Core\bin\Debug\DigitalSignage.Core.dll.config
+E:\Downloads\TrainTicketsBooking\DigitalSignage.Core\bin\Debug\DigitalSignage.Core.dll
+E:\Downloads\TrainTicketsBooking\DigitalSignage.Core\bin\Debug\DigitalSignage.Core.pdb
+E:\Downloads\TrainTicketsBooking\DigitalSignage.Core\obj\Debug\DigitalSignage.Core.dll
+E:\Downloads\TrainTicketsBooking\DigitalSignage.Core\obj\Debug\DigitalSignage.Core.pdb

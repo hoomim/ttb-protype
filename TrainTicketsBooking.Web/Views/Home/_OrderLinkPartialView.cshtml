@@ -1,0 +1,10 @@
+﻿@model TrainTicketsBooking.Models.TicketQueryModel
+
+@if (Model.CanBookingTickets)
+{
+    @Html.ActionLink("立即下单购买", "Order", "Home", new { From = Model.FromStationId, To = Model.ToStationId }, new { @class = "btn btn-success btn-block btn-lg" })
+}
+else
+{
+    <a href="#" class="btn btn-default btn-block btn-lg disabled">立即下单购买</a>
+}

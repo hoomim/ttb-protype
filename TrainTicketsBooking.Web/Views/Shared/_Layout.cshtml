@@ -1,0 +1,93 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - 火车票订票系统原型</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    @Styles.Render("~/Content/themes/frontend/css")
+
+    @Scripts.Render("~/Content/themes/frontend/pace.js")
+</head>
+
+<body data-spy="scroll" data-target="#header-navbar" data-offset="51">
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade">
+        <!-- begin #header -->
+        <div class="header navbar navbar-transparent navbar-fixed-top navbar-small">
+            <!-- begin container -->
+            <div class="container">
+                <!-- begin navbar-header -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand">
+                        <span class="brand-logo"></span>
+                        <span class="brand-text">
+                            <span class="text-theme"></span> 火车票订票系统原型
+                        </span>
+                    </a>
+                </div>
+                <!-- end navbar-header -->
+                <!-- begin navbar-collapse -->
+                <div class="collapse navbar-collapse" id="header-navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#about" data-click="scroll-to-target">关于我们</a></li>
+                        <li><a href="#service" data-click="scroll-to-target">送票服务</a></li>
+                        <li><a href="#contact" data-click="scroll-to-target">联系我们</a></li>
+                        <li><a href="#pricing" data-click="scroll-to-target">用户指南</a></li>
+                        <li class="active dropdown">
+                            <a href="#home" data-click="scroll-to-target" data-toggle="dropdown">会员 <b class="caret"></b></a>
+                            <ul class="dropdown-menu dropdown-menu-right  animated fadeInDown">
+                                <li><a href="#">登录</a></li>
+                                <li><a href="#">注册</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end navbar-collapse -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #header -->
+        <!-- begin #contact -->
+        <div id="contact" class="content bg-silver-lighter m-t-40" data-scrollview="true">
+            <!-- begin container -->
+            <div class="container">
+                <h2 class="content-title">在线订票</h2>
+                @Html.Partial("_Notifications")
+                @RenderBody()
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #contact -->
+
+
+    </div>
+    <!-- end #page-container -->
+    <!-- ================== BEGIN BASE JS ================== -->
+    <!--[if lt IE 9]>
+    @Scripts.Render("~/bundles/themes/sean/crossbrowserjs")
+        <![endif]-->
+    @Scripts.Render("~/bundles/themes/frontend/js")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+</body>
+</html>

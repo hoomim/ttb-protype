@@ -1,0 +1,10 @@
+E:\Downloads\TrainTicketsBooking\DigitalSignage.Core\bin\Debug\TrainTicketsBooking.Core.dll.config
+E:\Downloads\TrainTicketsBooking\DigitalSignage.Core\bin\Debug\TrainTicketsBooking.Core.dll
+E:\Downloads\TrainTicketsBooking\DigitalSignage.Core\bin\Debug\TrainTicketsBooking.Core.pdb
+E:\Downloads\TrainTicketsBooking\DigitalSignage.Core\obj\Debug\TrainTicketsBooking.Core.dll
+E:\Downloads\TrainTicketsBooking\DigitalSignage.Core\obj\Debug\TrainTicketsBooking.Core.pdb
+E:\Downloads\TrainTicketsBookingProtype\TrainTicketsBooking.Core\bin\Debug\TrainTicketsBooking.Core.dll.config
+E:\Downloads\TrainTicketsBookingProtype\TrainTicketsBooking.Core\bin\Debug\TrainTicketsBooking.Core.dll
+E:\Downloads\TrainTicketsBookingProtype\TrainTicketsBooking.Core\bin\Debug\TrainTicketsBooking.Core.pdb
+E:\Downloads\TrainTicketsBookingProtype\TrainTicketsBooking.Core\obj\Debug\TrainTicketsBooking.Core.dll
+E:\Downloads\TrainTicketsBookingProtype\TrainTicketsBooking.Core\obj\Debug\TrainTicketsBooking.Core.pdb
