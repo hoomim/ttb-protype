@@ -100,7 +100,9 @@
     <Compile Include="Engine\IEngine.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Orders\IOrderQueuedService.cs" />
     <Compile Include="Services\Orders\IOrderService.cs" />
+    <Compile Include="Services\Orders\ISyncLockService.cs" />
     <Compile Include="Services\Stations\IStationService.cs" />
     <Compile Include="Services\Tickets\ITicketService.cs" />
     <Compile Include="UI\NoticeType.cs" />

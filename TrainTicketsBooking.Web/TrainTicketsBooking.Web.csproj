@@ -227,6 +227,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartupTask\AutoMapperStartupTask.cs" />
+    <Compile Include="StartupTask\QueuedOrderProcessingStartupTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -772,6 +773,7 @@
     <Content Include="Views\Home\_OrderLinkPartialView.cshtml" />
     <Content Include="Views\Shared\_Notifications.cshtml" />
     <Content Include="Views\Home\Payment.cshtml" />
+    <Content Include="Views\Home\OrderStatus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

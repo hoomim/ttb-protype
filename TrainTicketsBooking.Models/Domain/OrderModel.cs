@@ -12,9 +12,14 @@ namespace TrainTicketsBooking.Models
     /// <summary>
     /// 订单视图模型
     /// </summary>
-     [Validator(typeof(OrderValidator))]
+    [Validator(typeof(OrderValidator))]
     public class OrderModel
     {
+        /// <summary>
+        /// 编号
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// 出发站编号
         /// </summary>
@@ -39,6 +44,11 @@ namespace TrainTicketsBooking.Models
         /// 手机号码
         /// </summary>
         public string Phone { get; set; }
+
+        /// <summary>
+        /// 订单状态
+        /// </summary>
+        public string OrderStatus { get; set; }
 
         #region Nested Fields
 

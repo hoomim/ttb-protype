@@ -84,13 +84,20 @@ namespace TrainTicketsBooking.Core.Domain
 
 
 
-        [Column] public string Phone { get; set; }
+
+		[Column] public string Phone { get; set; }
 
 
 
 
 
 		[Column] public DateTime? CreatedOn { get; set; }
+
+
+
+
+
+		[Column] public string OrderStatus { get; set; }
 
 
 
@@ -123,7 +130,6 @@ namespace TrainTicketsBooking.Core.Domain
 
 
 		[Column] public string Code { get; set; }
-
 
 
 

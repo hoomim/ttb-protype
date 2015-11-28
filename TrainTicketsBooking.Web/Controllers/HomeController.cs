@@ -99,10 +99,7 @@ namespace TrainTicketsBooking.Web.Controllers
                     throw new Exception("未知的出发站或者到达站");
                 }
 
-                var stations = this.stationService.GetLineStations();
-
-                model.FromStation = stations.FirstOrDefault(s => s.Id == model.From).Name;
-                model.ToStation = stations.FirstOrDefault(s => s.Id == model.To).Name;
+                model = FillOrderModel(model);
             }
             catch (Exception ex)
             {
@@ -124,11 +121,13 @@ namespace TrainTicketsBooking.Web.Controllers
                     var order = model.ToEntity();
                     order.CreatedOn = DateTime.Now;
 
-                    int result = this.orderService.Create(order);
+                    int result = this.orderService.PlaceOrder(order);
 
-                    if (Convert.ToInt32(result) > 0)
+                    if (result > 0)
                     {
-                        return RedirectToAction("Payment");
+                        this.orderService.CreateInQueue(order);
+
+                        return RedirectToAction("OrderStatus", new { id = result });
                     }
                 }
             }
@@ -143,6 +142,38 @@ namespace TrainTicketsBooking.Web.Controllers
         public ActionResult Payment()
         {
             return View();
+        }
+
+        public ActionResult OrderStatus(int? id)
+        {
+            var order = this.orderService.RetrieveOrder(id.GetValueOrDefault(0));
+
+            if (order == null)
+            {
+                order = new Order { OrderStatus = "Unkown" };
+            }
+
+            var model = FillOrderModel(order.ToModel());
+
+            return View(model);
+        }
+
+        /// <summary>
+        /// 填充OrderModel相关字段属性，可数据库关联查询，这里简单处理
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        protected OrderModel FillOrderModel(OrderModel model)
+        {
+            var stations = this.stationService.GetLineStations();
+
+            if (model.From.HasValue && model.To.HasValue)
+            {
+                model.FromStation = stations.FirstOrDefault(s => s.Id == model.From).Name;
+                model.ToStation = stations.FirstOrDefault(s => s.Id == model.To).Name;
+            }
+
+            return model;
         }
     }
 }

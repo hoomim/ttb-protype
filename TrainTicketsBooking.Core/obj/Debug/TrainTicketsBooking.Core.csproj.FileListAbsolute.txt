@@ -8,3 +8,8 @@ E:\Downloads\TrainTicketsBookingProtype\TrainTicketsBooking.Core\bin\Debug\Train
 E:\Downloads\TrainTicketsBookingProtype\TrainTicketsBooking.Core\bin\Debug\TrainTicketsBooking.Core.pdb
 E:\Downloads\TrainTicketsBookingProtype\TrainTicketsBooking.Core\obj\Debug\TrainTicketsBooking.Core.dll
 E:\Downloads\TrainTicketsBookingProtype\TrainTicketsBooking.Core\obj\Debug\TrainTicketsBooking.Core.pdb
+D:\Documents\GitHub\ttb-protype\TrainTicketsBooking.Core\bin\Debug\TrainTicketsBooking.Core.dll.config
+D:\Documents\GitHub\ttb-protype\TrainTicketsBooking.Core\bin\Debug\TrainTicketsBooking.Core.dll
+D:\Documents\GitHub\ttb-protype\TrainTicketsBooking.Core\bin\Debug\TrainTicketsBooking.Core.pdb
+D:\Documents\GitHub\ttb-protype\TrainTicketsBooking.Core\obj\Debug\TrainTicketsBooking.Core.dll
+D:\Documents\GitHub\ttb-protype\TrainTicketsBooking.Core\obj\Debug\TrainTicketsBooking.Core.pdb

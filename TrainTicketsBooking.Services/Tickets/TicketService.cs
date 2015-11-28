@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using TrainTicketsBooking.Framework.Data;
 using TrainTicketsBooking.Framework.Services;
 using TrainTicketsBooking.Core.Domain;
+using TrainTicketsBooking.Core.Enum;
 
 
 namespace TrainTicketsBooking.Services
@@ -31,7 +32,7 @@ namespace TrainTicketsBooking.Services
             int TICKETSCOUNT = 100;
 
             //查询起始站冲突的订单座位
-            Sql sql = Sql.Builder.Append("SELECT COUNT(Id) FROM `order` WHERE `From` < @0 AND `To` > @1", ticket.To, ticket.From);
+            Sql sql = Sql.Builder.Append("SELECT COUNT(Id) FROM `order` WHERE `From` < @0 AND `To` > @1 AND OrderStatus = @2", ticket.To, ticket.From, OrderStatus.Success.ToString());
 
             return TICKETSCOUNT - this.repository.ExecuteScalar<int>(sql.SQL, sql.Arguments);
         }
