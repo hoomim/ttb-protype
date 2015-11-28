@@ -1,9 +1,10 @@
-# ttb-protype
+﻿# ttb-protype
 本项目是一个参考nopCommerce项目进行分层设计的火车票订票系统演示原型.
 
 # 关于开发环境：
 1、DB：mysql-5.6.21-winx64
 2、IDE:Visual Studio 2013
+3、KV：Redis-x64-2.8.2104（启动报错时注意显式标明maxheap）
 
 # 关于部署调试：
 1、执行数据库脚本“DB-Init.sql”
